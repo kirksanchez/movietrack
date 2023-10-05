@@ -10,7 +10,12 @@ import ToWatchComponent from './components/ToWatchComponent';
 import Sidebar from './components/Sidebar';
 import { useMovies } from './hooks/useMovies';
 import { useLocalStorage } from './hooks/useLocalStorage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from 'react-router-dom';
 
 function App() {
   const { movies, setMovies, searchValue, setSearchValue } = useMovies('');
@@ -212,6 +217,7 @@ function App() {
 }
 
 function HomePage() {
+  const navigate = useNavigate();
   return (
     <div className='container-fluid movie-app'>
       <div className='movie-title'>
@@ -219,10 +225,7 @@ function HomePage() {
           <h1>MOVIETRACK</h1>
         </div>
         <div>
-          <button
-            className='login-button'
-            onClick={() => (window.location.href = '/login')}
-          >
+          <button className='login-button' onClick={() => navigate('/login')}>
             LOG IN
           </button>
         </div>
