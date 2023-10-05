@@ -1,0 +1,42 @@
+.movie-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.image-container,
+.poster {
+  position: relative;
+  width: 450px;
+  height: 500px;
+  transition: transform 0.2s;
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.image-container:hover .overlay {
+  opacity: 3;
+}

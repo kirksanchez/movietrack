@@ -1,0 +1,53 @@
+.sidebar {
+  width: 200px;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 0;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.sidebar-collapsed {
+  width: 50px;
+}
+
+.sidebar-collapsed .account-section span,
+.sidebar-collapsed span,
+.sidebar-collapsed .app-name {
+  display: none;
+  padding: 0;
+}
+
+.app-name {
+  font-size: 28px;
+}
+
+.app-container {
+  display: flex;
+}
+
+.movie-content {
+  flex: 1;
+}
+
+.top {
+  margin-top: 20px;
+}
+
+.account-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.account-section span,
+.sidebar > div span {
+  margin-left: 10px;
+}
+
+Link,
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+}
