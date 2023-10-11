@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   server: {
     proxy: {
-      api: 'https://movietrack-database.netlify.app',
+      api: 'https://movietrack-database.netlify.app/home',
     },
   },
   plugins: [react()],
