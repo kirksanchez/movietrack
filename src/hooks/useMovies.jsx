@@ -5,7 +5,7 @@ export const useMovies = (initialSearchValue) => {
   const [searchValue, setSearchValue] = useState(initialSearchValue);
 
   const getMovieRequest = async (searchValue) => {
-    const URL = `http://www.omdbapi.com/?apikey=9b4f8f46`;
+    const URL = `https://www.omdbapi.com/?apikey=9b4f8f46`;
 
     const fetchMovies = async (page = 1) => {
       const response = await fetch(`${URL}&s=${searchValue}&page=${page}`);
