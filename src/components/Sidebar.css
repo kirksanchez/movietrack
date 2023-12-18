@@ -13,11 +13,11 @@
   width: 50px;
 }
 
+/* Hide text labels in collapsed mode */
 .sidebar-collapsed .account-section span,
 .sidebar-collapsed span,
 .sidebar-collapsed .app-name {
   display: none;
-  padding: 0;
 }
 
 .app-name {
@@ -41,9 +41,39 @@
   flex-direction: column;
   gap: 20px;
 }
+
+/* Hide text next to icons and adjust alignment */
 .account-section span,
 .sidebar > div span {
   margin-left: 10px;
+}
+
+/* Non-toggling sidebar styles for small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50px; /* Fixed width for small screens */
+    cursor: default; /* Normal cursor on small screens */
+  }
+
+  /* Hide all text labels on small screens */
+  .sidebar .account-section span,
+  .sidebar span,
+  .sidebar .app-name {
+    display: none;
+  }
+
+  /* Center the icons when labels are not displayed */
+  .sidebar a,
+  .sidebar .top {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Disable the hover effect on small screens */
+  .sidebar a:hover,
+  .sidebar .top:hover {
+    background-color: transparent;
+  }
 }
 
 Link,

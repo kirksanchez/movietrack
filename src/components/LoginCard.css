@@ -1,9 +1,9 @@
 .login-card {
-  width: 500px;
-  height: 500px;
-  padding: 50px 40px;
-  margin: 30vh auto;
-  box-shadow: 0, 4px, 8px, rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 50px 20px;
+  margin: 10vh auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   color: white;
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 .login-card h2 {
-  font-size: 150px;
+  font-size: 4rem;
   margin-bottom: 20px;
   background-color: none;
 }
@@ -24,7 +24,7 @@
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 1.2rem;
   outline: none;
   transition: border 0.2s;
 }
@@ -36,7 +36,7 @@
 .login-card button {
   margin-top: 10px;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -63,10 +63,26 @@
 
 .password-container button {
   padding: 10px 15px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .password-container input:focus {
   outline: none;
   border: 1px solid #007bff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .login-card {
+    margin: 5vh auto;
+  }
+
+  .login-card h2 {
+    font-size: 3rem;
+  }
+
+  .login-card input,
+  .login-card button {
+    font-size: 1rem;
+  }
 }

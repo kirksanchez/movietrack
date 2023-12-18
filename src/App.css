@@ -11,29 +11,47 @@
 }
 
 .movie-title h1 {
-  font-size: 150px;
+  font-size: 4rem;
+  margin: 0;
 }
 
 .movie-title {
-  font-size: 50px;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40vh;
+  margin-top: 10vh;
 }
 
 .login-button {
-  padding: 20px;
+  padding: 1rem 2rem;
   border-radius: 50px;
   background-color: #1ed760;
   font-weight: 800;
   color: white;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 1.5rem;
   text-align: center;
 }
 
 .login-button:hover {
   background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .movie-title h1 {
+    font-size: 2rem;
+  }
+
+  .movie-title {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+  }
+
+  .login-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
 }
